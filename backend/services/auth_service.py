@@ -37,7 +37,7 @@ def registrar_usuario(nombre, apellido, correo, contraseña, region_id):
     # Insertar usuario
     cursor.execute("""
         INSERT INTO usuario
-        (nombre, apellido, correo, contraseña, region_id)
+        (nombre, apellido, correo, contrasena, region_id)
         VALUES (%s,%s,%s,%s,%s)
     """, (
         nombre,
@@ -81,7 +81,7 @@ def iniciar_sesion(correo, contraseña):
 
     contraseña_valida = bcrypt.checkpw(
         contraseña.encode("utf-8"),
-        usuario["contraseña"].encode("utf-8")
+        usuario["contrasena"].encode("utf-8")
     )
 
     if not contraseña_valida:
