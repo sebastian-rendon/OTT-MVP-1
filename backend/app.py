@@ -17,7 +17,7 @@ from routes.cerrar_sesion_routes import cerrar_sesion_bp
 from routes.perfil import perfil_bp
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, origins="*", supports_credentials=True)
 
 app.register_blueprint(regiones_bp)
 app.register_blueprint(auth_bp)
