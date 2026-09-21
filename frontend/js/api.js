@@ -1,7 +1,7 @@
 const STREAMHUB_AUTH_KEY = "streamhub_auth";
 const STREAMHUB_USERS_KEY = "streamhub_users";
 
-const API_BASE_URL = (window.API_BASE_URL || "http://127.0.0.1:5000").replace(/\/$/, "");
+const API_BASE_URL = (window.API_BASE_URL || "http://localhost:5000").replace(/\/$/, "");
 const API_ENDPOINTS = {
 login: window.API_ENDPOINTS?.login || "/login",
 register: window.API_ENDPOINTS?.register || "/registro",

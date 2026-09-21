@@ -9,7 +9,7 @@ const submitBtn = document.getElementById("resetBtn");
 const messageBox = document.getElementById("formMessage");
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const API_URL = (window.API_BASE_URL || "http://127.0.0.1:5000") + "/recuperar-contrasena";
+const API_URL = (window.API_BASE_URL || "http://localhost:5000") + "/recuperar-contrasena";
 
 function setError(fieldName, message) {
     const group = form.querySelector(`[data-field="${fieldName}"]`);
